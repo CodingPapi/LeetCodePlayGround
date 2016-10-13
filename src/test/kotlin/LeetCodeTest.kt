@@ -44,4 +44,30 @@ class LeetCodeTest {
         assertEquals(8, nodeTest.next.next.`val`)
     }
 
+    @Test
+    @Throws(Exception::class)
+    fun merge() {
+        assertArrayEquals(intArrayOf(1, 2, 3), lc.mergeSort(intArrayOf(3, 2, 1), 0, 2))
+        assertArrayEquals(intArrayOf(1, 2, 3, 5, 8), lc.mergeSort(intArrayOf(1, 5, 2, 8, 3), 0, 4))
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun quick() {
+        assertArrayEquals(intArrayOf(1, 2, 3), lc.quickSort(intArrayOf(3, 2, 1), 0, 2))
+        assertArrayEquals(intArrayOf(1, 2, 3, 5, 8), lc.quickSort(intArrayOf(1, 5, 2, 8, 3), 0, 4))
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun canPartition() {
+        assertTrue(lc.canPartition(intArrayOf(1, 3, 1, 5, 7, 9)))
+        assertFalse(lc.canPartition(intArrayOf(2, 2, 3, 5)))
+        assertTrue(lc.canPartition(intArrayOf(2, 2, 2, 3, 5)))
+        assertFalse(lc.canPartition(intArrayOf(3, 1, 5, 7, 9)))
+        assertTrue(lc.canPartition(intArrayOf(71,70,66,54,32,63,38,98,4,22,61,40,6,8,6,21,71,36,30,34,44,60,89,53,60,56,73,14,63,37,15,58,51,88,88,32,80,32,10,89,67,29,68,65,34,15,88,8,57,78,37,63,73,65,47,39,32,74,31,44,43,4,10,8,96,22,58,87,29,99,79,13,96,21,62,71,34,55,72,3,96,7,36,64,30,6,14,87,12,90,40,13,29,21,94,33,99,86,4,100)))
+        assertTrue(lc.canPartition(intArrayOf(1, 2, 3, 4, 5, 6, 7)))
+    }
+
+
 }

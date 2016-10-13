@@ -21,6 +21,10 @@ public class LeetCodeTestJava {
 
     }
 
+    public void tr(int[] a) {
+
+    }
+
     @Test
     public void twoSum() throws Exception {
 
